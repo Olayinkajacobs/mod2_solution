@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  float: left;
+  width: 100%;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 2rem; */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container div {
+  float: left;
+  width: 30%;
+  /* margin: 1%; */
+  border: 3px solid black;
+}
+
+.container div .title1:nth-child(1) {
+  border: 1.5px solid rgb(0, 0, 0);
+}
+
+.container div .title2:nth-child(1) {
+  border: 1.5px solid rgb(0, 0, 0);
+}
+
+.container div .title3:nth-child(1) {
+  border: 1.5px solid rgb(0, 0, 0);
+}
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section {
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+  background-color: wheat;
+  position: relative;
+  margin: 1%;
+}
+
+.section {
+}
+
+.section p {
+  padding: 50px 10px;
+  line-height: 1.5;
+}
+
+.title1 {
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ee9d9c; /* Set title region color */
+  color: #000; /* Set text color for contrast */
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.title2 {
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #910a08; /* Set title region color */
+  color: #ffffff; /* Set text color for contrast */
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.title3 {
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffc15e; /* Set title region color */
+  color: #000; /* Set text color for contrast */
+  padding: 5px 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 48%; /* Equal size for first 2 sections */
+    float: left;
+    margin-right: 2%; /* Add spacing between sections */
+  }
+  .section:nth-child(3) {
+    clear: both; /* Move third section to new row */
+    width: 100%; /* Full width for third section */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    width: 100%; /* Each section takes up the full width in mobile view */
+    float: center; /* Remove float for mobile view */
+    clear: both; /* Ensure each section starts on a new row */
+    margin-right: 0; /* Remove margin between sections in mobile view */
+  }
+}
