@@ -22,9 +22,7 @@ header {
 }
 
 .section {
-  width: calc(
-    33.33% - 20px
-  ); /*This is to set the width of the element to one-third*/
+  width: calc(33.33% - 20px);
   background-color: wheat;
   margin: 20px 10px;
   padding: 20px;
@@ -41,8 +39,8 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #ee9d9c; /* Set title region color */
-  color: #000; /* Set text color for contrast */
+  background-color: #ee9d9c;
+  color: #000;
   padding: 5px 20px;
   text-align: center;
 }
